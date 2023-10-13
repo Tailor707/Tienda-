@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            // Inicializa el mapa (requiere tu API key)
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+
+            // Añade marcadores de tiendas (ejemplo)
+            var tienda1 = new google.maps.Marker({
+                position: {lat: -34.397, lng: 150.644},
+                map: map,
+                title: 'Tienda 1'
+            });
+
+            // Añade más marcadores según sea necesario
+        }
+    </script>
+<body>
+    <header>
+        <h1>Mi Tienda</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="tiendas.html">Tiendas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <form id="busqueda" action="#">
+            <input type="text" placeholder="Buscar por nombre, dirección o tendero">
+            <input type="submit" value="Buscar">
+        </form>
+    </section>
+    <section class="mapa" id="map"></section>
+
+    <section class="lista-tiendas">
+        <h2>Listado de Tiendas</h2>
+        <ul>
+            <li>Tienda 1 - Dirección 1</li>
+            <li>Tienda 2 - Dirección 2</li>
+            <!-- Agrega más tiendas según sea necesario -->
+        </ul>
+    </section>
+</body>
+</div>
+
+<footer>
+    <p>© 2023 Mi Tienda. Todos los derechos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>

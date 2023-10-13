@@ -1,0 +1,26 @@
+    {% extends "base.html" %}
+
+    {% block content %}
+    <div class="content1">
+        <div class="formulario">
+          <h1>Productos Publicados</h1>
+          <form action="/comprar" method="post"></form>
+      
+          <ul>
+            {% for product in products %}
+            <li>
+              <strong>{{ product.name }}</strong><br>
+              Descripción: {{ product.description }}<br>
+              Precio: ${{ product.price }}<br>
+              <img src="{{ product.image_url }}" alt="{{ product.name }}">
+            </li>
+            {% endfor %}
+          </ul>
+          <a href="#">Agregar al carrito</a>
+        </div>
+      </div>
+      
+    {% endblock %}
+
+
+

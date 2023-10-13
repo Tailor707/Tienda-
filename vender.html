@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content1">
+    <div class="formulario">
+      <h1>Publicar Productos</h1>
+      <form action="/vender" method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <label for="nombre_producto">{{ form.name.label }}</label>
+        {{ form.name(size=40, placeholder="Nombre del producto") }}<br>
+  
+        <label for="descripcion">{{ form.description.label }}</label>
+        {{ form.description(rows=5, placeholder="Descripción del producto") }}<br>
+  
+        <label for="precio">{{ form.price.label }}</label>
+        {{ form.price(placeholder="Precio del producto") }}<br>
+  
+        <label for="imagen">Imagen:</label>
+        <input type="file" name="imagen"><br>
+  
+        {{ form.submit }}
+      </form>
+    </div>
+  </div>
+  
+{% endblock %}
